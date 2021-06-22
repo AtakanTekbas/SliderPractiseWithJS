@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CodingRituality</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
+    <link rel="stylesheet" href="~/css/footer.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="layoutnavbar">
+                <div class="logonavbar">
+                    <img src="~/icon/logoicon.png" alt="">
+                </div>
+                <div class="itemnavbar">
+                    <ul>
+                        <li><a href="#slidersection" > Slider  </a> </li>
+                        <li><a href="#MiddleSection"> About  </a> </li>
+                        <li><a href="#footer"> Footer  </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer id="footer">
+        <div class="footerSection">
+            <div class="ContactSection">
+                <i class="fa fa-envelope-open-o" id="footerSectionEmail" aria-hidden="true"></i>
+                <i class="fa fa-phone-square" id="footerSectionPhone" aria-hidden="true"></i>
+                <i class="fa fa-linkedin-square" id="footerSectionLinkedin" aria-hidden="true"></i>
+                <i class="fa fa-github" id="footerSectionGithub" aria-hidden="true"></i>
+                <p id="contacting">Contact Us!</p>
+                <div id="ContactInformation">
+                    <p id="ContactInformationP"> Burası neresi </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://use.fontawesome.com/bab99d52f4.js"></script>
+    <script src="~/js/footersection.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
